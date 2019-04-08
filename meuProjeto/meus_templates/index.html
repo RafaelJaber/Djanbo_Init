@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{{% block main %}
+    <h1>Ola mundo</h1>
+
+    <ul>
+        {% for pessoa in lista %}
+            {% if pessoa.sexo == 'm' %}
+                <li>Olá senhor {{ pessoa.nome }}</li>
+            {% elif pessoa.sexo == 'f' %}
+                <li>Olá senhora {{ pessoa.nome }}</li>
+            {% else %}
+                <li>Ola {{ pessoa.nome }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock  %}}
