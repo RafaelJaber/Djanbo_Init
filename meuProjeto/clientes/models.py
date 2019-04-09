@@ -25,11 +25,12 @@ class Cliente(models.Model):
     cpf = models.OneToOneField(CPF, on_delete=models.CASCADE, null=True, blank=True)
     data_cad = models.DateTimeField(auto_now=True)
     departamentos = models.ManyToManyField(Departamentos, null=True, blank=True)
+    foto = models.ImageField(upload_to='cliente_fotos')
 
     def __str__(self):
         return self.nome
 
-
+ 
 class Telefone(models.Model):
     numero = models.CharField(max_length=20, blank=False, null=False)
     descricao = models.CharField(max_length=80, blank=False, null=False)

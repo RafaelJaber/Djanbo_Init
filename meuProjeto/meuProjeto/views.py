@@ -6,6 +6,8 @@ def home(request):
         {'nome': 'Rafael', 'sexo': 'm'},
         {'nome': 'Sindy', 'sexo': 'f'},
         {'nome': 'Silas', 'sexo': 'm'},
+        {'nome': 'Pedro', 'sexo': 'm'}
     ]
     return render(request, 'index.html', {'lista': lista})
 
+ 

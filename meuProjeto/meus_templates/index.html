@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 
+{% block title %}
+Pagina Teste
+{% endblock %}
 
 {{% block main %}
-    <h1>Ola mundo</h1>
+    <h1 class='blue_text'>Ola mundo</h1>
 
     <ul>
         {% for pessoa in lista %}
@@ -15,4 +18,8 @@
             {% endif %}
         {% endfor %}
     </ul>
+
+    <buton class="btn btn-danger" onclick="btnClick()">Butão</buton>
+
+    {% include 'footer.html' %}
 {% endblock  %}}
